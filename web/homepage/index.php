@@ -11,7 +11,7 @@
 			<div id="top">
 				<div class="logo"></div>
 				<div class="time">
-					<? php
+					<?php
 						echo "Today is " .date(" l ") . date("Y-m-d");
 					?>
 				</div>
