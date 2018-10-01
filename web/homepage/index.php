@@ -10,9 +10,9 @@
 		
 			<div id="top">
 				<div class="logo"></div>
-				<div class="time"><? php
-						date_default_timezone_set("America/Denver");
-						echo "The time is " . date("h:i:sa");
+				<div class="time">
+					<? php
+						echo "Today is " .date(" l ") . date("Y-m-d");
 					?>
 				</div>
 				
