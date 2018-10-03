@@ -4,6 +4,7 @@
 	<title>03 Teach:Team Activity</title>
 </head>
 <body>
+	<h2>03 Teach:Team Activity</h2>
 	<form action="display.php" method="post"  >
 		<label>Name:</label>
 			<input type="text" name="name"><br><br>
