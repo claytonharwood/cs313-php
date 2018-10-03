@@ -11,12 +11,7 @@
         <p><strong>Comments: </strong></p>
             <p><?php echo $_POST['comments'] ?></p>
         <p><strong>Continents Visited: </strong></p>
-        	<ul>
-                <?php 
-                   foreach($_POST['visited'] as $item) {
-                        echo '<li>'.$visited[$item].'</li>';
-                   }
-                ?>
-            </ul>
+        	<p><?php echo $_POST['visited'] ?></p>
+            
 </body>
 </html>
