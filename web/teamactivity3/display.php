@@ -5,7 +5,7 @@
 </head>
 <body>
 	<h2>User Submitted Info:</h2>
-		<p><strong>Name: </strong><?php echo filter_var($_POST['name'], FILTER_VALIDATE_STRING) ?></p>
+		<p><strong>Name: </strong><?php echo $_POST['name'] ?></p>
         <p><strong>Email: </strong><a href="mailto:<?php echo $_POST['email'] ?>"><?php echo $_POST['email'] ?></a></p>
         <p><strong>Major: </strong><?php echo $_POST['major'] ?></p>
         <p><strong>Comments: </strong></p>

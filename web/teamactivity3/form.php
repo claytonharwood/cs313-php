@@ -15,7 +15,7 @@
   			<input type="radio" name="major" value="Computer information Technology">Computer information Technology<br>
   			<input type="radio" name="major" value="Computer Engineering">Computer Engineering<br><br>
   		<label>Comments</label><br>  
-      		<textarea rows="4" cols="50" name="comment"></textarea><br><br>
+      		<textarea rows="4" cols="50" name="comments"></textarea><br><br>
         <label>Places you have visited</label><br>
         	<input type="checkbox" name="visited" value="North America">North America<br>
   			<input type="checkbox" name="visited" value="South America">South America<br>
