@@ -13,8 +13,8 @@
         <p><strong>Continents Visited: </strong></p>
         	<ul>
                 <?php 
-                   foreach($_POST['continents'] as $item) {
-                        echo '<li>'.$continents[$item].'</li>';
+                   foreach($_POST['visited'] as $item) {
+                        echo '<li>'.$visited[$item].'</li>';
                    }
                 ?>
             </ul>
