@@ -10,8 +10,8 @@ session_start();
 </head>
 <body>
 	<h2>03 Prove: Assignment- PHP Shopping Cart</h2>
-	
-	<form method="get" action="/cart.php">
+
+	<form method="get" action="cart.php">
 		<button type="submit">View Cart</button>
 	</form>
 	
