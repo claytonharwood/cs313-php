@@ -10,31 +10,36 @@ session_start();
 </head>
 <body>
 	<h2>03 Prove: Assignment- PHP Shopping Cart</h2>
-
-	<button>View Cart</button>
+	
+	<form method="get" action="/cart.php">
+		<button type="submit">View Cart</button>
+	</form>
 	
 	<div class="product_box">
-		<img src="images/placeholder.jpg"><br>
-		<h3>Optimus Prime</h3>
-		<p>Product description</p>
-		<p>$20.00</p>
-		<button>Add to Cart</button>
+		<form method="post" action="">
+			<img src="images/placeholder.jpg"><br>
+			<h3>Product 1</h3>
+			<p>Product description</p>
+			<p>$20.00</p>
+			<input type="submit" name="btn" class="button" value="Add to Cart">
+	        <input type="hidden" name="action" value="product1">
+		</form>
 	</div>
 
 	<div class="product_box">
 		<form method="post" action="">
 			<img src="images/placeholder.jpg"><br>
-			<h3>Bumblebee</h3>
+			<h3>Product2</h3>
 			<p>Product description</p>
 			<p>$22.00</p>
-			<input type="submit" name="btn" class="button" value="Submit"/>
-	        <input type="hidden" name="action" value="Bumblebee">
+			<input type="submit" name="btn" class="button" value="Add to Cart">
+	        <input type="hidden" name="action" value="product2">
 		</form>
 	</div>
 
 	<div class="product_box">
 		<img src="images/placeholder.jpg"><br>
-		<h3>Product title</h3>
+		<h3>Product 3</h3>
 		<p>Product description</p>
 		<p>$18.00</p>
 		<button>Add to Cart</button>
@@ -42,7 +47,7 @@ session_start();
 
 	<div class="product_box">
 		<img src="images/placeholder.jpg"><br>
-		<h3>Product title</h3>
+		<h3>Product 4</h3>
 		<p>Product description</p>
 		<p>$15.00</p>
 		<button>Add to Cart</button>
