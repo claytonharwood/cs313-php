@@ -40,7 +40,7 @@ catch (PDOException $ex)
 			<nav>
 				<ul>
 					<li><a href=""> Home </a></li>
-					<li><a href="#products">Add Cards</a></li>
+					<li><a href="addcards.php">Add Cards</a></li>
 				</ul>
 			</nav>
 		</div>	
@@ -50,7 +50,7 @@ catch (PDOException $ex)
     	$statement = $db->query('SELECT year, cardType, cardNumber FROM cardInfo');
 		while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 		{
-		  echo $row['year'] . ' ' . $row['cardType'] . ' ' . $row['cardNumber'] . '<br/>';
+		  echo $row['year'] $row['cardType'] $row['cardNumber'] '<br/>';
 		}
 		?>
 
