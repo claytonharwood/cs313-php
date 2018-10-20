@@ -47,10 +47,12 @@ catch (PDOException $ex)
 		<div class="bg"></div>
 		<div id="page">	
 		<?php  	
-    	$statement = $db->query('SELECT year, cardType, cardNumber FROM cardInfo');
-		while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+    	foreach ($db->query('SELECT year, cardType, cardNumber FROM cardInfo') as $row)
 		{
-		  echo $row['year'] . $row['cardType'] . $row['cardNumber'] '<br/>';
+		  echo 'Year: ' . $row['year'];
+		  echo ' Card Type: ' . $row['cardType'];
+		  echo ' Card Number: ' . $row['cardNumber'];
+		  echo '<br/>';
 		}
 		?>
 
