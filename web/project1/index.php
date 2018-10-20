@@ -50,7 +50,7 @@ catch (PDOException $ex)
     	$statement = $db->query('SELECT year, cardType, cardNumber FROM cardInfo');
 		while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 		{
-		  echo $row['year'] $row['cardType'] $row['cardNumber'] '<br/>';
+		  echo $row['year'] . $row['cardType'] . $row['cardNumber'] '<br/>';
 		}
 		?>
 
