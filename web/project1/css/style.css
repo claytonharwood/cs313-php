@@ -145,31 +145,13 @@ input[type=text]:focus {
 	text-decoration: none;
 }
 
-#bottom-nav {
+.copyright {
 	width:500px;
 	height: auto;
 	padding-top: 25px;
-	margin-left: 700px;
+	margin-left: auto;
+	margin-right: auto;
 	color: #fff;
-	float: left;
-}
-
-#bottom-nav ul { 
-	list-style: none; 
-	margin: 0; 
-	padding: 0; 
-	overflow: hidden;
-}
-
-#bottom-nav li { float: left; }
-
-#bottom-nav li a { 
-	display: block;
-	color: #fff;
-	text-align: center;
-	padding: 14px 16px;
-	font-size: 18px;
-	text-decoration: none;
 }
 
 footer { 

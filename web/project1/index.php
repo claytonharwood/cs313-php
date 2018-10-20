@@ -59,12 +59,10 @@ catch (PDOException $ex)
 		</div>	
 
 		<footer>
-			<div id="bottom-nav">
+							
+				<div class="copyright">&copy 2018 www.sportscardtracker.com, all rights reserved</div>
 				
-				<div>&copy 2018 www.sportscardtracker.com, all rights reserved</div>
-				
-			</div>
-				
+							
 		</footer>
 		
 	</body>

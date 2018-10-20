@@ -70,7 +70,7 @@ catch (PDOException $ex)
 
 		<footer>
 			
-			<div>&copy 2018 www.sportscardtracker.com, all rights reserved</div>			
+			<div class="copyright">&copy 2018 www.sportscardtracker.com, all rights reserved</div>			
 				
 		</footer>
 		
