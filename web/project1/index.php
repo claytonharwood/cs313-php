@@ -39,7 +39,7 @@ catch (PDOException $ex)
 			<div id="phone-num"></div>
 			<nav>
 				<ul>
-					<li><a href=""> Home </a></li>
+					<li><a href="index.php"> Home </a></li>
 					<li><a href="addcards.php">Add Cards</a></li>
 				</ul>
 			</nav>

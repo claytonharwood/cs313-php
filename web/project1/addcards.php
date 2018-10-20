@@ -39,7 +39,7 @@ catch (PDOException $ex)
 			<div id="phone-num"></div>
 			<nav>
 				<ul>
-					<li><a href=""> Home </a></li>
+					<li><a href="index.php"> Home </a></li>
 					<li><a href="addcards.php">Add Cards</a></li>
 				</ul>
 			</nav>
@@ -52,7 +52,7 @@ catch (PDOException $ex)
 				<input type="text" name="firstName"><br>
 				<label>Last Name:</label>
 				<input type="text" name="lastName"><br>
-				<input type="button" name="Submit">
+				<input type="Submit" name="submit">
 			</form>
 
 		<h2>Add Card</h2>
@@ -63,7 +63,7 @@ catch (PDOException $ex)
 				<input type="text" name="cardType"><br>
 				<label>Card Number:</label>
 				<input type="text" name="cardNumber"><br>
-				<input type="button" name="Submit">
+				<input type="Submit" name="submit">
 			</form>	
 
 		</div>	
