@@ -49,6 +49,7 @@ catch (PDOException $ex)
 		<?php  	
     	foreach ($db->query('SELECT year, cardType, cardNumber FROM cardInfo') as $row)
 		{
+		  echo 'Player: ' . $row['firstName'] . $row['lastName'];
 		  echo 'Year: ' . $row['year'];
 		  echo ' Card Type: ' . $row['cardType'];
 		  echo ' Card Number: ' . $row['cardNumber'];
@@ -59,10 +60,7 @@ catch (PDOException $ex)
 		</div>	
 
 		<footer>
-							
-				<div class="copyright">&copy 2018 www.sportscardtracker.com, all rights reserved</div>
-				
-							
+			<div class="copyright">&copy 2018 www.sportscardtracker.com, all rights reserved</div>
 		</footer>
 		
 	</body>
