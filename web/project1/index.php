@@ -55,6 +55,8 @@ catch (PDOException $ex)
 		  echo ' Card Number: ' . $row['cardNumber'];
 		  echo '<br/>';
 		}
+		?>
+		<?php
 		SELECT c.year, c.cardType FROM player p JOIN cardInfo c ON p.playerId = c.playerId WHERE p.firstName = 'Freddie' AND p.lastName = 'Freeman';
 		?>
 
