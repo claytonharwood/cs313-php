@@ -49,7 +49,7 @@ catch (PDOException $ex)
 		<?php  	
     	foreach ($db->query('SELECT year, cardType, cardNumber FROM cardInfo') as $row)
 		{
-		  echo 'Player: ' . $row['firstName'] . $row['lastName'];
+		  echo 'Player: ' . $row['firstName'] .''. $row['lastName'];
 		  echo 'Year: ' . $row['year'];
 		  echo ' Card Type: ' . $row['cardType'];
 		  echo ' Card Number: ' . $row['cardNumber'];

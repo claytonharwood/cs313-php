@@ -5,8 +5,8 @@ CREATE TABLE player (
 );
 
 CREATE TABLE cardInfo (
-	cardId INT NOT NULL,
-	playerId SERIAL foreign key,
+	cardId SERIAL primary key,
+	playerId INT REFERENCES player(playerId),
 	year VARCHAR(4),
 	cardType VARCHAR(50),
 	cardNumber VARCHAR(10)	

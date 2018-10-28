@@ -47,6 +47,11 @@ catch (PDOException $ex)
 		<div class="bg"></div>
 		<div id="page">
 		<h2>Add Player</h2>	
+		 <?php
+                if (isset($message)) {
+                 echo $message;
+                }
+                ?>
 			<form>
 				<label>First Name:</label>
 				<input type="text" name="firstName"><br>
@@ -56,14 +61,15 @@ catch (PDOException $ex)
 			</form>
 
 		<h2>Add Card</h2>
-			<form>
+			<form method="post" action="/addcards-model.php">
 				<label>Year:</label>
-				<input type="text" name="year"><br>
+				<input type="text" name="year" id="year" <?php if(isset($year)){echo "value='$year'";} ?> ><br>
 				<label>Card Type:</label>
-				<input type="text" name="cardType"><br>
+				<input type="text" name="cardType" id="cardType" <?php if(isset($cardType)){echo "value='$cardType'";} ?>><br>
 				<label>Card Number:</label>
-				<input type="text" name="cardNumber"><br>
-				<input type="Submit" name="submit">
+				<input type="text" name="cardNumber" id="cardNumber" <?php if(isset($cardNumber)){echo "value='$cardNumber'";} ?>><br>
+				<input type="submit" name="btn" class="button" value="Submit"/>
+                <input type="hidden" name="action" value="addcard">
 			</form>	
 
 		</div>	
