@@ -61,7 +61,9 @@ catch (PDOException $ex)
 			</form>
 
 		<h2>Add Card</h2>
-			<form method="post" action="/addcards-model.php">
+			<form method="post" action="addcards-model.php">
+				<label>Player Id:</label>
+				<input type="text" name="playerId" id="playerId" <?php if(isset($playerId)){echo "value='$playerId'";} ?> ><br>
 				<label>Year:</label>
 				<input type="text" name="year" id="year" <?php if(isset($year)){echo "value='$year'";} ?> ><br>
 				<label>Card Type:</label>

@@ -5,14 +5,15 @@
  */
 
 // Insert product into database
-function addCard($year, $cardType, $cardNumber ){
+function addCard($playerId, $year, $cardType, $cardNumber ){
 // The SQL statement
-$sql = 'INSERT INTO cardInfo (year, cardType, cardNumber) VALUES (:year, :cardType, :cardNumber)';
+$sql = 'INSERT INTO cardInfo (playerId, year, cardType, cardNumber) VALUES (:playerId, :year, :cardType, :cardNumber)';
 // Create the prepared statement using the acme connection
 $stmt = $db->prepare($sql);
 // The next four lines replace the placeholders in the SQL
 // statement with the actual values in the variables
 // and tells the database the type of data it is
+$stmt->bindValue(':playerId', $playerId, PDO::PARAM_STR);
 $stmt->bindValue(':year', $year, PDO::PARAM_STR);
 $stmt->bindValue(':cardType', $cardType, PDO::PARAM_STR);
 $stmt->bindValue(':cardNumber', $cardNumber, PDO::PARAM_STR);
