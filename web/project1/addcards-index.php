@@ -20,7 +20,7 @@ case 'addcard':
       $cardNumber = filter_input(INPUT_POST, 'cardNumber', FILTER_SANITIZE_STRING);
             
     // Check for missing data
-    if(empty(empty(playerId) || (empty($year) || empty($cardType) || empty($cardNumber)){
+    if(empty($playerId) || (empty($year) || empty($cardType) || empty($cardNumber)){
       $message = '<p>Please provide information for all empty form fields.</p>';
       include 'addcards.php';
       exit;
@@ -32,11 +32,15 @@ case 'addcard':
     // Check and report the result
     if($prodOutcome === 1){
       $message = "<p>Thanks for adding your card.</p>";
-      include '';
+      include 'addcards.php';
       exit;
-    } else {addcards.php
+    } else {
       $message = "<p>Sorry, card failed to be added, please try again.</p>";
       include 'addcards.php';
       exit;
     }
     break;
+    default:
+       
+      }        
+        include 'addcards.php';
