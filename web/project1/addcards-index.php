@@ -27,7 +27,7 @@ case 'addcard':
     }
 
     // Send the data to the model
-    $prodOutcome = addCards($playerId, $year, $cardType, $cardNumber);
+    $prodOutcome = addCard($playerId, $year, $cardType, $cardNumber);
 
     // Check and report the result
     if($prodOutcome === 1){
