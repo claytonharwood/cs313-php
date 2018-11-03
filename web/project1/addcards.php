@@ -7,8 +7,7 @@
 		<title>Sports Card Tracker | Add Cards</title>
 		<meta name="description" content="Add Cards to your player" />
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<script src="js/analytics.js" type="text/javascript"></script>
-				
+						
 	</head>
 	<body>
 		<div class="top">

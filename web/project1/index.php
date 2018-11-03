@@ -7,8 +7,7 @@
 		<title>Sports Card Tracker</title>
 		<meta name="description" content="Track your sports cards!" />
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<script src="js/analytics.js" type="text/javascript"></script>
-				
+						
 	</head>
 	<body>
 		<div class="top">
@@ -24,6 +23,7 @@
 		<div class="bg"></div>
 		<hr>
 		<div id="page">	
+		<h3>Players</h3>
 		<?php
 		$statement = $db->query('SELECT * FROM player');
 			while ($row = $statement->fetch(PDO::FETCH_ASSOC))
@@ -32,7 +32,7 @@
 			}
 		?>
 
-
+		<h3>Card Info</h3>
 		<?php  	
     	foreach ($db->query('SELECT year, cardType, cardNumber FROM cardInfo') as $row)
 		{
@@ -44,14 +44,20 @@
 		?>
 
 		<?php
-            $query = 'SELECT * FROM cardInfo';
-            	foreach($db->query($query) as $row) { 
-        ?>
-               <?php echo $row['year']; ?>
-               <?php echo $row['cardType']; ?>
-               <?php echo $row['cardNumber']; ?>
-               
-        <?php } ?>
+		$statement = $db->prepare("SELECT playerId, year, cardType, cardNumber FROM cardInfo");
+		$statement->execute();
+		// Go through each result
+		while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+		{
+			// The variable "row" now holds the complete record for that
+			// row, and we can access the different values based on their
+			// name
+			echo '<p>';
+			echo '<strong>' . $row['playerId'] . ' ' . $row['year'] . ':';
+			echo $row['cardType'] . '</strong>' . ' - ' . $row['cardNumber'];
+			echo '</p>';
+		}
+		?>
 
 		</div>	
 
