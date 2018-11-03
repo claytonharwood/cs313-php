@@ -48,10 +48,10 @@ catch (PDOException $ex)
 		<hr>
 		<div id="page">	
 		<?php
-		$statement = $db->query('SELECT playerId, firstName, lastName FROM player');
+		$statement = $db->query('SELECT * FROM player');
 			while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 			{
-			  echo 'ID#: ' . $row['playerId'] . 'First Name: ' . $row['firstName'] . ' lastName: ' . $row['lastName'] . '<br/>';
+			  echo 'Id#: ' . $row['playerId'] . 'First Name: ' . $row['firstName'] . ' lastName: ' . $row['lastName'] . '<br/>';
 			}
 		?>
 
