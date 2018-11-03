@@ -45,18 +45,18 @@ catch (PDOException $ex)
 			</nav>
 		</div>	
 		<div class="bg"></div>
+		<hr>
 		<div id="page">	
 		<?php  	
     	foreach ($db->query('SELECT year, cardType, cardNumber FROM cardInfo') as $row)
 		{
-		  echo 'Player: ' . $row['firstName'] .''. $row['lastName'];
 		  echo 'Year: ' . $row['year'];
 		  echo ' Card Type: ' . $row['cardType'];
 		  echo ' Card Number: ' . $row['cardNumber'];
 		  echo '<br/>';
 		}
 		?>
-		
+
 		</div>	
 
 		<footer>
