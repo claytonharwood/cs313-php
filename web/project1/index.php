@@ -43,6 +43,14 @@
 		}
 		?>
 
+		<?php
+            $query = 'SELECT * FROM cardInfo';
+            	foreach($db->query($query) as $row) { 
+        ?>
+               <h3> <?php echo $row['year'].' '.$row['cardType'].':'.$row['cardNumber']; ?></h3>
+               
+        <?php } ?>
+
 		</div>	
 
 		<footer>
