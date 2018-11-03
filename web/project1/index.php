@@ -47,6 +47,15 @@ catch (PDOException $ex)
 		<div class="bg"></div>
 		<hr>
 		<div id="page">	
+		<?php
+		$statement = $db->query('SELECT playerId, firstName, lastName FROM player');
+			while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+			{
+			  echo 'ID#: ' . $row['playerId'] . 'First Name: ' . $row['firstName'] . ' lastName: ' . $row['lastName'] . '<br/>';
+			}
+		?>
+
+
 		<?php  	
     	foreach ($db->query('SELECT year, cardType, cardNumber FROM cardInfo') as $row)
 		{
