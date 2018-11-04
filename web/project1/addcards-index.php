@@ -33,20 +33,20 @@ switch ($action){
  
 case 'addcard':
       // Filter and store the data
-      $playerId = filter_input(INPUT_POST, 'playerId', FILTER_SANITIZE_STRING);
+      $playerid = filter_input(INPUT_POST, 'playerid', FILTER_SANITIZE_STRING);
       $year = filter_input(INPUT_POST, 'year', FILTER_SANITIZE_STRING);
-      $cardType = filter_input(INPUT_POST, 'cardType', FILTER_SANITIZE_STRING);
-      $cardNumber = filter_input(INPUT_POST, 'cardNumber', FILTER_SANITIZE_STRING);
+      $cardtype = filter_input(INPUT_POST, 'cardtype', FILTER_SANITIZE_STRING);
+      $cardnumber = filter_input(INPUT_POST, 'cardnumber', FILTER_SANITIZE_STRING);
             
     // Check for missing data
-    if(empty($playerId) || (empty($year) || empty($cardType) || empty($cardNumber)){
+    if(empty($playerid) || (empty($year) || empty($cardtype) || empty($cardnumber)){
       $message = '<p>Please provide information for all empty form fields.</p>';
       include 'addcards.php';
       exit;
     }
 
     // Send the data to the model
-    $prodOutcome = addCard($playerId, $year, $cardType, $cardNumber);
+    $prodOutcome = addCard($playerid, $year, $cardtype, $cardnumber);
 
     // Check and report the result
     if($prodOutcome === 1){
