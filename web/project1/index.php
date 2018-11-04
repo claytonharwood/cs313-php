@@ -33,18 +33,18 @@
 		?>
 
 		<h3>Card Info</h3>
-		<?php  	
-    	foreach ($db->query('SELECT year, cardType, cardNumber FROM cardInfo') as $row)
-		{
-		  echo 'Year: ' . $row['year'];
-		  echo ' Card Type: ' . $row['cardType'];
-		  echo ' Card Number: ' . $row['cardNumber'];
-		  echo '<br/>';
-		}
-		?>
+		<?php
+	      foreach ($db->query(‘SELECT year, cardtype, cardnumber FROM cardInfo’) as $row)
+	       {
+	         echo ‘Year: ’ . $row[‘year’];
+	         echo ' Card Type: ' . $row[‘cardtype’];
+	         echo ' Card Number: ' . $row[‘cardnumber’];
+	         echo ‘<br/>’;
+	       }
+	       ?>
 
 		<?php
-		$statement = $db->prepare("SELECT playerId, year, cardType, cardNumber FROM cardInfo");
+		$statement = $db->prepare("SELECT playerid, year, cardtype, cardnumber FROM cardInfo");
 		$statement->execute();
 		// Go through each result
 		while ($row = $statement->fetch(PDO::FETCH_ASSOC))
@@ -53,8 +53,8 @@
 			// row, and we can access the different values based on their
 			// name
 			echo '<p>';
-			echo '<strong>' . $row['playerId'] . ' ' . $row['year'] . ':';
-			echo $row['cardType'] . '</strong>' . ' - ' . $row['cardNumber'];
+			echo '<strong>' . $row['playerid'] . ' ' . $row['year'] . ':';
+			echo $row['cardtype'] . '</strong>' . ' - ' . $row['cardnumber'];
 			echo '</p>';
 		}
 		?>
