@@ -28,7 +28,7 @@
 		$statement = $db->query('SELECT * FROM player');
 			while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 			{
-			  echo 'Id#: ' . $row['playerId'] . 'First Name: ' . $row['firstName'] . ' lastName: ' . $row['lastName'] . '<br/>';
+			  echo 'Id#: ' . $row['playerid'] . 'First Name: ' . $row['firstname'] . ' lastName: ' . $row['lastname'] . '<br/>';
 			}
 		?>
 
@@ -36,6 +36,7 @@
 		<?php
 	      foreach ($db->query('SELECT year, cardtype, cardnumber FROM cardInfo') as $row)
 	       {
+	         echo 'Player Id: ' . $row['playerid'];
 	         echo 'Year: ' . $row['year'];
 	         echo ' Card Type: ' . $row['cardtype'];
 	         echo ' Card Number: ' . $row['cardnumber'];
