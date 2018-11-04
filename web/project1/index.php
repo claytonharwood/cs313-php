@@ -34,12 +34,12 @@
 
 		<h3>Card Info</h3>
 		<?php
-	      foreach ($db->query(‘SELECT year, cardtype, cardnumber FROM cardInfo’) as $row)
+	      foreach ($db->query('SELECT year, cardtype, cardnumber FROM cardInfo') as $row)
 	       {
-	         echo ‘Year: ’ . $row[‘year’];
-	         echo ' Card Type: ' . $row[‘cardtype’];
-	         echo ' Card Number: ' . $row[‘cardnumber’];
-	         echo ‘<br/>’;
+	         echo 'Year: ' . $row['year'];
+	         echo ' Card Type: ' . $row['cardtype'];
+	         echo ' Card Number: ' . $row['cardnumber'];
+	         echo '<br/>';
 	       }
 	       ?>
 
