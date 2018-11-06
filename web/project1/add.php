@@ -1,11 +1,10 @@
 <?php
 
 // get the data from the POST
-$book = $_POST['txtBook'];
-$chapter = $_POST['txtChapter'];
-$verse = $_POST['txtVerse'];
-$content = $_POST['txtContent'];
-$topicIds = $_POST['chkTopics'];
+$playerid = $_POST['playerid'];
+$year = $_POST['year'];
+$cardtype = $_POST['cardtype'];
+$cardnumber = $_POST['cardnumber'];
 
 require("db.php");
 $db = get_db();

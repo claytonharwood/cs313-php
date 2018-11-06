@@ -39,13 +39,13 @@
 		<h2>Add Card</h2>
 			<form method="post" action="add.php">
 				<label>Player Id:</label>
-				<input type="text" name="playerid" id="playerid" <?php if(isset($playerid)){echo "value='$playerid'";} ?> ><br>
+				<input type="text" name="playerid" id="playerid"><br>
 				<label>Year:</label>
-				<input type="text" name="year" id="year" <?php if(isset($year)){echo "value='$year'";} ?> ><br>
+				<input type="text" name="year" id="year"><br>
 				<label>Card Type:</label>
-				<input type="text" name="cardtype" id="cardtype" <?php if(isset($cardtype)){echo "value='$cardtype'";} ?>><br>
+				<input type="text" name="cardtype" id="cardtype"><br>
 				<label>Card Number:</label>
-				<input type="text" name="cardnumber" id="cardnumber" <?php if(isset($cardnumber)){echo "value='$cardnumber'";} ?>><br>
+				<input type="text" name="cardnumber" id="cardnumber"><br>
 				<input type="submit" name="btn" class="button" value="Submit"/>
                 
 			</form>	
