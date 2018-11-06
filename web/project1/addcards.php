@@ -37,7 +37,7 @@
 			</form>
 
 		<h2>Add Card</h2>
-			<form method="post" action="addcards-model.php">
+			<form method="post" action="add.php">
 				<label>Player Id:</label>
 				<input type="text" name="playerid" id="playerid" <?php if(isset($playerid)){echo "value='$playerid'";} ?> ><br>
 				<label>Year:</label>
@@ -47,7 +47,7 @@
 				<label>Card Number:</label>
 				<input type="text" name="cardnumber" id="cardnumber" <?php if(isset($cardnumber)){echo "value='$cardnumber'";} ?>><br>
 				<input type="submit" name="btn" class="button" value="Submit"/>
-                <input type="hidden" name="action" value="addcard">
+                
 			</form>	
 
 		</div>	
