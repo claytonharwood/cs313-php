@@ -34,7 +34,7 @@
 
 		<h3>Card Info</h3>
 		<?php
-	      foreach ($db->query('SELECT cardinfo.year, cardinfo.cardtype, cardinfo.cardnumber FROM cardInfo INNER JOIN player ON player.playerid=cardinfo.playerid') as $row)
+	      foreach ($db->query('SELECT cardinfo.year, cardinfo.cardtype, cardinfo.cardnumber FROM cardInfo INNER JOIN player ON cardinfo.playerid=player.playerid') as $row)
 	       {
 	         echo 'Player Id: ' . $row['playerid'];
 	         echo ' Year: ' . $row['year'];
