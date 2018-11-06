@@ -25,6 +25,8 @@
 		<h2>Add Player</h2>	
 		 
 			<form method="post" action="addplayer.php">
+				<label>Player Id:</label>
+				<input type="text" name="playerid"><br>
 				<label>First Name:</label>
 				<input type="text" name="firstname"><br>
 				<label>Last Name:</label>
