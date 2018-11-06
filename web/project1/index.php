@@ -28,7 +28,7 @@
 		$statement = $db->query('SELECT * FROM player');
 			while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 			{
-			  echo 'Id#: ' . $row['playerid'] . 'First Name: ' . $row['firstname'] . ' Last Name: ' . $row['lastname'] . '<br/>';
+			  echo 'Id#: ' . $row['playerid'] .' '. 'First Name: ' . $row['firstname'] . ' Last Name: ' . $row['lastname'] . '<br/>';
 			}
 		?>
 
@@ -43,6 +43,8 @@
 	         echo '<br/>';
 	       }
 	       ?>
+
+	       <br><br>
 
 		</div>	
 
