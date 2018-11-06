@@ -23,17 +23,13 @@
 		<div class="bg"></div>
 		<div id="page">
 		<h2>Add Player</h2>	
-		 <?php
-                if (isset($message)) {
-                 echo $message;
-                }
-                ?>
-			<form>
+		 
+			<form method="post" action="addplayer.php">
 				<label>First Name:</label>
-				<input type="text" name="firstName"><br>
+				<input type="text" name="firstname"><br>
 				<label>Last Name:</label>
-				<input type="text" name="lastName"><br>
-				<input type="Submit" name="submit">
+				<input type="text" name="lastname"><br>
+				<input type="submit" name="btn" class="button" value="Submit"/>
 			</form>
 
 		<h2>Add Card</h2>
