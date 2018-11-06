@@ -1,13 +1,13 @@
 <?php
 
+include './db.php';
+
 // get the data from the POST
 $playerid = $_POST['playerid'];
 $year = $_POST['year'];
 $cardtype = $_POST['cardtype'];
 $cardnumber = $_POST['cardnumber'];
 
-require("db.php");
-$db = get_db();
 try
 {
 	
