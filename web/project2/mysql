@@ -1,0 +1,5 @@
+CREATE TABLE leaderboard (
+	playerId SERIAL primary key,
+	name VARCHAR(50),
+	score VARCHAR(50)
+);
