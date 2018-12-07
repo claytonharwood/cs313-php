@@ -7,31 +7,11 @@ app.use(express.static("public"));
 app.set("views", "views");
 app.set("view engine", "ejs");
 
-app.get("/", function(req, res) {
-	console.log("Received a request for /");
-
-	res.write("This is the root");
-	res.end();
-});
-
-app.get("/home", function(req, res) {
-	//controller
-	console.log("Received a request for the home page");
-	var name = getCurrentLoggedInUserAccount();
-
-	var param = {username: user};
-
-	res.render("home");
-
+// index page 
+app.get('/', function(req, res) {
+    res.render('views/index');
 });
 
 app.listen(5000, function() {
 	console.log("The server is up and listening on port 5000");
 });
-
-//model
-
-function getCurrentLoggedInUserAccount() {
-
-	return "John";
-}
