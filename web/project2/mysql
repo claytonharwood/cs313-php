@@ -3,3 +3,6 @@ CREATE TABLE leaderboard (
 	name VARCHAR(50),
 	score VARCHAR(50)
 );
+
+INSERT INTO leaderboard (playerId, name, score) VALUES ('1', 'Clayton', '500');
+INSERT INTO leaderboard (playerId, name, score) VALUES ('2', 'Bob', '400');
